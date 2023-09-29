@@ -27,8 +27,8 @@ module.exports = () => {
 
       // WebpackPwaManifest to generate manifest.json file
       new WebpackPwaManifest({
-        name: 'Pwa-Text-Editor',
-        short_name: 'PTE', // Short name for home screen
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E', // Short name for home screen
         description: 'A Progressive Web Text Editor',
         background_color: '#ffffff', // Background color for splash screen
         theme_color: '#000000', // Theme color for the PWA
