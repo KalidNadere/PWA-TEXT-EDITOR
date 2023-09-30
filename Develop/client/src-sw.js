@@ -30,7 +30,7 @@ registerRoute(({ request }) => request.mode === 'navigate', ({ event }) => {
 });
 
 // TODO: Implement asset caching
-registerRoute();
+// registerRoute();
 
 // Need to define routes and strategies for caching assets. Replacing the empty registerRoute() with appropriate asset caching logic
 registerRoute(
