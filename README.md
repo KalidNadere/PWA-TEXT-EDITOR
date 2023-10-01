@@ -26,7 +26,8 @@ The app is a Progressive Web Application (PWA) text editor designed to provide u
 - Event Handling
 
 ## Deployed URL-Heroku
-
+- https://dashboard.heroku.com/apps 
+- https://pwa-text-editor-heroku23-b8b4fd12c22b.herokuapp.com/ 
 
 ## Visuals
 - manifest.json 
