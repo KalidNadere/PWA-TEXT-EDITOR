@@ -29,9 +29,6 @@ registerRoute(({ request }) => request.mode === 'navigate', ({ event }) => {
   return pageCache.handle({ event });
 });
 
-// TODO: Implement asset caching
-// registerRoute();
-
 // Need to define routes and strategies for caching assets. Replacing the empty registerRoute() with appropriate asset caching logic
 registerRoute(
   /\.(?:js|css|jpg|jprg|svg|gif)$/,
