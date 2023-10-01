@@ -9,10 +9,15 @@ const { InjectManifest } = require("workbox-webpack-plugin");
 module.exports = () => {
   return {
     mode: "development",
+    // Entry point for files
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
+      database: "./src/js/database.js",
+      editor: "./src/js/editor.js",
+      header: "./src//js/header.js",
     },
+    // Output for bundles
     output: {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist"),
@@ -21,17 +26,20 @@ module.exports = () => {
       // HtmlWebpackPlugin to generate HTML files
       new HtmlWebpackPlugin({
         template: "./index.html",
-        filename: "index.html",
-        chunks: ["main"], // specified entry point
+        // filename: "index.html",
+        // chunks: ["main"], // specified entry point
+        title: 'JATE'
       }),
-
+      
       // WebpackPwaManifest to generate manifest.json file
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: "Just Another Text Editor",
         short_name: "J.A.T.E", // Short name for home screen
         description: "A Progressive Web Text Editor",
-        background_color: "#ffffff", // Background color for splash screen
-        theme_color: "#000000", // Theme color for the PWA
+        background_color: "#225ca3", // Background color for splash screen
+        theme_color: "#225ca3", // Theme color for the PWA
         icons: [
           {
             src: path.resolve("src/images/logo.png"), // Path to app icon
