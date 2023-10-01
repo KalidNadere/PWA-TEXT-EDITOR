@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       // HtmlWebpackPlugin to generate HTML files
       new HtmlWebpackPlugin({
-        template: '/src/index.html',
+        template: './client/index.html',
         filename: 'index.html',
         chunks: ['main'], // specified entry point
       }),
@@ -52,7 +52,7 @@ module.exports = () => {
       // CSS loaders
       rules: [
         {
-          test: /\.CSS$/,
+          test: /\.cssS$/,
           use: ['style-loader', 'css-loader'],
         },
         {
