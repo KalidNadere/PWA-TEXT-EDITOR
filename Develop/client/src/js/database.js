@@ -18,7 +18,6 @@ export const putDb = async (content) => {
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
 
-  // const timestamp = Date.now();
   const id = await store.put({ value: content, id:1 });
 
   await tx.done;
