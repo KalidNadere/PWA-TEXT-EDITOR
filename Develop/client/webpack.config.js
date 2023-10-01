@@ -11,7 +11,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       // HtmlWebpackPlugin to generate HTML files
       new HtmlWebpackPlugin({
-        template: './client/index.html',
+        template: './index.html',
         filename: 'index.html',
         chunks: ['main'], // specified entry point
       }),
@@ -52,7 +52,7 @@ module.exports = () => {
       // CSS loaders
       rules: [
         {
-          test: /\.cssS$/,
+          test: /\.cssS$/i,
           use: ['style-loader', 'css-loader'],
         },
         {
