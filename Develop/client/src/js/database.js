@@ -18,8 +18,8 @@ export const putDb = async (content) => {
   const tx = db.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
 
-  const timestamp = Date.now();
-  const id = await store.add({ content, timestamp });
+  // const timestamp = Date.now();
+  const id = await store.put({ value: content, id:1 });
 
   await tx.done;
   console.log(`Content with ID ${id} added to the database. `);
@@ -31,7 +31,7 @@ export const getDb = async () => {
   const tx = db.transaction('jate', 'readonly');
   const store = tx.objectStore('jate');
 
-  const contentArray = await store.getAll();
+  const contentArray = await store.get(1);
   await tx.done;
 
   return contentArray;
