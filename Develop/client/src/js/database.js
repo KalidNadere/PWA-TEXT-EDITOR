@@ -33,7 +33,7 @@ export const getDb = async () => {
   const contentArray = await store.get(1);
   await tx.done;
 
-  return contentArray;
+  return contentArray?.value;
 };
 
 // Initialise the IndexedDB database when this module is imported

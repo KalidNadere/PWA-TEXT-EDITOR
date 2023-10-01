@@ -40,6 +40,8 @@ module.exports = () => {
         description: "A Progressive Web Text Editor",
         background_color: "#225ca3", // Background color for splash screen
         theme_color: "#225ca3", // Theme color for the PWA
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve("src/images/logo.png"), // Path to app icon
@@ -52,7 +54,7 @@ module.exports = () => {
       // Add InjectManifest to integrate your service worker
       new InjectManifest({
         swSrc: "./src-sw.js", // Path to service worker script
-        swDest: "sw.js", // Output file for service worker
+        swDest: "src-sw.js", // Output file for service worker
       }),
     ],
 
